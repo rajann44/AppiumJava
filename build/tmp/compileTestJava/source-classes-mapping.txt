@@ -1,0 +1,2 @@
+testScripts/verifyPage.java
+ testScripts.verifyPage

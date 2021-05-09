@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Appium Suite">
+
+    <test name="Test For Automating Mobile Apps">
+        <classes>
+            <class name="testScripts.verifyPage"/>
+        </classes>
+    </test>
+
+    <test name="Test For Automating Mobile Apps2">
+    <groups>
+        <run>
+            <include name="unit"></include>
+        </run>
+    </groups>
+        <packages>
+            <package name="testScripts"></package>
+        </packages>
+    </test>
+
+</suite>
