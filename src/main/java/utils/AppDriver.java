@@ -20,10 +20,10 @@ public class AppDriver {
     public static AppiumDriver<MobileElement> getDriver(){
         PropertiesFile.readPropertiesFile();
         desiredCapabilities.setCapability("platformName", "Android");
-        desiredCapabilities.setCapability("platformVersion" , "7.1.1");
+        desiredCapabilities.setCapability("platformVersion" , "7.1");
         //desiredCapabilities.setCapability("deviceName ", "Android SDK built for x86");
         //desiredCapabilities.setCapability("udid", "emulator-5554");
-        desiredCapabilities.setCapability("deviceName" , "Android Emulator");
+        //desiredCapabilities.setCapability("deviceName" , "Android Emulator");
         desiredCapabilities.setCapability("automationName", "UiAutomator2");
         desiredCapabilities.setCapability("app" , System.getProperty("user.dir")+"/apk_file/ApiDemos-debug.apk");
         //desiredCapabilities.setCapability("appPackage", "com.android.contacts");
