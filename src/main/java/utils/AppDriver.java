@@ -20,16 +20,17 @@ public class AppDriver {
     public static AppiumDriver<MobileElement> getDriver(){
         PropertiesFile.readPropertiesFile();
         desiredCapabilities.setCapability("platformName", "Android");
-        desiredCapabilities.setCapability("platformVersion ", "11");
-        desiredCapabilities.setCapability("deviceName ", "Android SDK built for x86");
-        desiredCapabilities.setCapability("udid", "emulator-5554");
+        desiredCapabilities.setCapability("platformVersion ", "7.1.1");
+        //desiredCapabilities.setCapability("deviceName ", "Android SDK built for x86");
+        //desiredCapabilities.setCapability("udid", "emulator-5554");
+        desiredCapabilities.setCapability("deviceName" , "Android Emulator");
         desiredCapabilities.setCapability("automationName", "UiAutomator2");
         desiredCapabilities.setCapability("app" , System.getProperty("user.dir")+"/apk_file/ApiDemos-debug.apk");
         //desiredCapabilities.setCapability("appPackage", "com.android.contacts");
         //desiredCapabilities.setCapability("appActivity", "com.android.contacts.activities.PeopleActivity");
         //desiredCapabilities.setCapability("noReset","false");
         try {
-            url = new URL("http://127.0.0.1:4723/wd/hub");
+            url = new URL("http://localhost:4723/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
