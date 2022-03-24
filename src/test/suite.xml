@@ -3,19 +3,27 @@
 <suite name="Appium Suite">
 
     <test name="Test For Automating Mobile Apps">
-        <classes>
+        <!--<classes>
             <class name="testScripts.verifyPage"/>
-        </classes>
+        </classes>-->
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="testScripts"/>
+        </packages>
     </test>
 
-    <test name="Test For Automating Mobile Apps2">
+    <test name="Test For Automating Mobile Apps Two">
     <groups>
         <run>
-            <include name="unit"></include>
+            <include name="unit"/>
         </run>
     </groups>
         <packages>
-            <package name="testScripts"></package>
+            <package name="testScripts"/>
         </packages>
     </test>
 
