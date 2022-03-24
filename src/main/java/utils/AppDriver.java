@@ -1,6 +1,5 @@
 package utils;
 
-import config.PropertiesFile;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -14,18 +13,19 @@ public class AppDriver {
 
     protected static AppiumDriver<MobileElement> driver;
     public static DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-    public static String device, implicitWaitTime;
+    public static String device;
     static URL url;
 
     public static AppiumDriver<MobileElement> getDriver(){
-        PropertiesFile.readPropertiesFile();
+        desiredCapabilities.setCapability("automationName", "UiAutomator2");
         desiredCapabilities.setCapability("platformName", "Android");
-        desiredCapabilities.setCapability("platformVersion" , "7.1");
+        desiredCapabilities.setCapability("platformVersion" , "7.1.1");
+        desiredCapabilities.setCapability("deviceName" , "Android Emulator");
+        desiredCapabilities.setCapability("app" , System.getProperty("user.dir")+"/apk_file/ApiDemos-debug.apk");
+
         //desiredCapabilities.setCapability("deviceName ", "Android SDK built for x86");
         //desiredCapabilities.setCapability("udid", "emulator-5554");
         //desiredCapabilities.setCapability("deviceName" , "Android Emulator");
-        desiredCapabilities.setCapability("automationName", "UiAutomator2");
-        desiredCapabilities.setCapability("app" , System.getProperty("user.dir")+"/apk_file/ApiDemos-debug.apk");
         //desiredCapabilities.setCapability("appPackage", "com.android.contacts");
         //desiredCapabilities.setCapability("appActivity", "com.android.contacts.activities.PeopleActivity");
         //desiredCapabilities.setCapability("noReset","false");
@@ -35,7 +35,7 @@ public class AppDriver {
             e.printStackTrace();
         }
         driver = new AndroidDriver<>(url, desiredCapabilities);
-        driver.manage().timeouts().implicitlyWait(Long.parseLong(implicitWaitTime), TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         return driver;
     }
 
