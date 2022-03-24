@@ -19,7 +19,7 @@ public class BasePage {
      * Close App
      */
     public static void closeApp() {
-        driver.quit();
+        driver.closeApp();
     }
 
 }

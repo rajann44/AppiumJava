@@ -7,14 +7,10 @@ import uiElements.pages.BasePage;
 
 public class GenericLocator extends BasePage {
 
-    @AndroidFindBy(id = "com.google.android.calculator:id/digit_1")
-    public AndroidElement numberOne;
+    @AndroidFindBy(accessibility = "Accessibility")
+    public AndroidElement accessibility;
 
-    @AndroidFindBy(id = "com.google.android.calculator:id/digit_2")
-    public AndroidElement numberTwo;
-
-    @AndroidFindBy(id = "com.google.android.calculator:id/op_add")
-    public AndroidElement plus;
-
+    @AndroidFindBy(accessibility = "Accessibility Node Querying")
+    public AndroidElement accessibilityNode;
 
 }
