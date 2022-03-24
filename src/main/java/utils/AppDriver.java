@@ -20,7 +20,7 @@ public class AppDriver {
     public static AppiumDriver<MobileElement> getDriver(){
         PropertiesFile.readPropertiesFile();
         desiredCapabilities.setCapability("platformName", "Android");
-        desiredCapabilities.setCapability("platformVersion ", "7.1.1");
+        desiredCapabilities.setCapability("platformVersion ", "10");
         //desiredCapabilities.setCapability("deviceName ", "Android SDK built for x86");
         //desiredCapabilities.setCapability("udid", "emulator-5554");
         desiredCapabilities.setCapability("deviceName" , "Android Emulator");
