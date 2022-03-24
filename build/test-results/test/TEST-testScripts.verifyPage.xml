@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testScripts.verifyPage" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-24T18:19:51" hostname="Rajans-MacBook-Air.local" time="10.419">
-  <properties/>
-  <testcase name="openCalculator" classname="testScripts.verifyPage" time="0.27"/>
-  <testcase name="openCalculator" classname="testScripts.verifyPage" time="9.304"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
